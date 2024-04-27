@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public\css/styles.css">
+    <title>hbs</title>
+</head>
+
+<body>
+    <nav class=" container flex justify-around bg-slate-300 p-4">
+
+        <div class="title text-sky-600 text-4xl font-bold ">
+            <h1>BookStore</h1>
+        </div>
+     <div class="nav_items">
+        <ul class="flex gap-4 text-2xl">
+            <li>
+                <a href="/home">Home</a>
+            </li>
+            <li>
+                <a href="">Books</a>
+            </li>
+            <li>
+                <a href="">Catagories</a>
+            </li>
+            <li>
+                <a href="">Authors</a>
+            </li>
+         
+            <li>
+                <a href="/login">Login</a>
+            </li>
+            <li>
+                <a href="/register">Register</a>
+            </li>
+        </ul>
+     </div>
+
+    </nav>
+    <main>
+        <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+            {{{body}}}
+        </div>
+    </main>
+
+</body>
+
+</html>
