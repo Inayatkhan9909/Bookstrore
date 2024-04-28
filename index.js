@@ -3,7 +3,7 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const dbConnect = require("./config/dbConnect");
-const {RegisterController,LoginController} = require("./Controllers/userController")
+const { RegisterController, LoginController } = require("./Controllers/userController")
 require("dotenv").config();
 const port = process.env.PORT;
 const exphbs = require('express-handlebars');
@@ -27,6 +27,7 @@ app.use(express.static(path.join(__dirname, "public")));
 //get routes 
 app.get('/', (req, res) => { res.send("hello World") });
 app.get('/home', (req, res) => { res.render('home') });
+app.get('/books', (req, res) => { res.render('books') });
 app.get('/login', (req, res) => { res.render('login') })
 app.get("/register", (req, res) => { res.render("register") });
 
