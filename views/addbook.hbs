@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Addbook</title>
+</head>
+
+<body>
+
+    {{#if message}}
+    <span class="bg-blue-100 text-blue-700 px-4 py-2 rounded-md block">{{message}}</span>
+    {{/if}}
+
+    <div class="container mx-auto">
+        <form action="/addbook" method="post"
+            class="flex flex-col m-auto mt-6 items-center gap-4 w-3/6 p-10 border-2 border-black rounded-md">
+            <section class="flex flex-col items-center gap-2 text-2xl">
+                <h1>Add book</h1>
+            </section>
+            <section class="flex flex-col items-center gap-2">
+                <label for="bookName" class="text-gray-700">Bookname</label>
+                <input type="text" name="bookName" placeholder="Enter Bookname"
+                    class="border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:border-blue-500">
+            </section>
+
+            <section class="flex flex-col items-center gap-2">
+                <label for="bookDescription" class="text-gray-700">Description</label>
+                <input type="text" name="bookDescription" placeholder="Enter book description"
+                    class="border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:border-blue-500">
+            </section>
+
+            <section class="flex flex-col items-center gap-2">
+                <label for="bookPrice" class="text-gray-700">Price</label>
+                <input type="text" name="bookPrice" placeholder="Enter book price"
+                    class="border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:border-blue-500">
+            </section>
+
+            <section class="flex flex-col items-center gap-2">
+                <label for="bookQuantity" class="text-gray-700">Quantity</label>
+                <input type="text" name="bookQuantity" placeholder="Enter Quantity"
+                    class="border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:border-blue-500">
+            </section>
+
+            <section class="flex flex-col items-center gap-2">
+                <label for="image" class="text-gray-700">Image</label>
+                <input type="file" name="image" placeholder="Enter book image"
+                    class="border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:border-blue-500">
+            </section>
+
+            <section class="flex flex-col items-center gap-2">
+                <button type="submit"
+                    class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Add</button>
+            </section>
+        </form>
+    </div>
+
+</body>
+
+</html>

@@ -4,7 +4,6 @@ const bcrypt = require("bcrypt")
 require("dotenv").config();
 const secretKey = process.env.SECRET_KEY
 
-
 const RegisterController = async (req, res) => {
     try {
 
@@ -49,7 +48,6 @@ const LoginController = async (req, res) => {
 
         if (email != "" && password != "") {
 
-
             let user = await User.findOne({ email })
 
             if (user) {
@@ -57,10 +55,9 @@ const LoginController = async (req, res) => {
                 if (verifyPass) {
                     const token = jwt.sign({ userId: user._id }, secretKey)
 
-
                     res.cookie('token', token, {
                         httpOnly: true,
-                        maxAge: 24 * 60 * 60 * 1000,   // milliseocnds
+                        maxAge: 24 * 60 * 60 * 1000,
                         //secure: true,     //https
                     });
 

@@ -10,15 +10,16 @@
 
 <body>
 
-{{#if message}}
+    {{#if message}}
     <span class="bg-blue-100 text-blue-700 px-4 py-2 rounded-md block">{{message}}</span>
-{{/if}}
+    {{/if}}
 
     <div class="container mx-auto">
-        <form method="post" class="flex flex-col m-auto mt-6 items-center gap-4 w-3/6 p-10 border-2 border-black rounded-md">
-             <section class="flex flex-col items-center gap-2 text-2xl">
+        <form action="/register" method="post"
+            class="flex flex-col m-auto mt-6 items-center gap-4 w-3/6 p-10 border-2 border-black rounded-md">
+            <section class="flex flex-col items-center gap-2 text-2xl">
                 <h1>Register page</h1>
-             </section>
+            </section>
             <section class="flex flex-col items-center gap-2">
                 <label for="username" class="text-gray-700">Username</label>
                 <input type="text" name="username" placeholder="Username"
@@ -36,10 +37,10 @@
                     class="border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:border-blue-500">
             </section>
 
-                  <section class="flex flex-col items-center gap-2">
-            <button type="submit"
-                class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Register</button>
-                </section>
+            <section class="flex flex-col items-center gap-2">
+                <button type="submit"
+                    class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Register</button>
+            </section>
         </form>
     </div>
 
